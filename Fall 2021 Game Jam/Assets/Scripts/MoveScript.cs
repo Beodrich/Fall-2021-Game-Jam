@@ -6,10 +6,13 @@ public class MoveScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float moveSpeed;
+    public static int maxHealth = 8;
+    public int currentHealth;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
     }
 
     void Update()
