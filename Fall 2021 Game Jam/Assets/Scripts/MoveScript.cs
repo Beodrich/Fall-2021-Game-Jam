@@ -18,5 +18,9 @@ public class MoveScript : MonoBehaviour
         float vertical = (Input.GetKey(KeyCode.W) ? 1 : 0) - (Input.GetKey(KeyCode.S) ? 1 : 0);
         Vector2 moveDirection = new Vector2(horizontal, vertical).normalized;
         rb.AddForce(moveDirection * moveSpeed * Time.deltaTime, ForceMode2D.Impulse);
+
+        Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }
