@@ -96,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8264d802fcdc0a42bc2f38ded6e0166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pizzaTime: {fileID: 8300000, guid: f12f22477c2084847814ac1e8420833c, type: 3}
   speed: 10
 --- !u!61 &9075352798452337952
 BoxCollider2D:
