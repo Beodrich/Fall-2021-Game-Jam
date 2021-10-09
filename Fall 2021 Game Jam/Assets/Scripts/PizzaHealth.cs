@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PizzaHealth : MonoBehaviour
 {
+    public Image pizzaImage;
+    public List<Sprite> pizzaSprites;
     public int pizzaSlices;
     private Vector3 startingPosition;
     public float shakingMagnitude;
@@ -33,6 +36,8 @@ public class PizzaHealth : MonoBehaviour
     public void RemovePizzaSlices(int value)
     {
         shakingTimeLeft = shakingTime;
+        pizzaSlices -= value;
+        pizzaImage.sprite = pizzaSprites[pizzaSlices];
     }
 
 
