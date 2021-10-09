@@ -45,6 +45,14 @@ public class MoveScript : MonoBehaviour
             pizzaHealth.RemovePizzaSlices(1);
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            foreach (PizzaDeliveryPizza pizza in FindObjectsOfType<PizzaDeliveryPizza>())
+            {
+                CollectPizza(pizza.gameObject);
+            }
+        }
+
         if (currentPizzas > 0)
         {
             if (Input.GetMouseButtonDown(1))
@@ -96,9 +104,14 @@ public class MoveScript : MonoBehaviour
         switch (col.gameObject.tag)
         {
             case "Pizza":
-                currentPizzas += 1;
-                Destroy(col.gameObject);
+                CollectPizza(col.gameObject);
                 break;
         }
+    }
+
+    public void CollectPizza(GameObject pizza)
+    {
+        currentPizzas += 1;
+        Destroy(pizza);
     }
 }
