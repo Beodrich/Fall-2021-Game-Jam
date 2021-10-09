@@ -40,6 +40,9 @@ public class TV : MonoBehaviour
         if(isChasing){
             shooting.CheckForShoot();
         }
+       // if(Mathf.Abs(localVelocity.z) < 0.01f){
+         //   Debug.Log("walking backwards");
+        //}
     }
 
     private float InRange()
