@@ -47,7 +47,7 @@ public class TV : MonoBehaviour
         return Vector3.Distance(transform.position, player.transform.position);
     }
 
-    void TakeDamage(){
+    public void TakeDamage(){
         health=Mathf.Max(0,health-1);
         if(health==0){
             Destroy(this.gameObject);

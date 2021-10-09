@@ -49,7 +49,7 @@ mouse_pos = Input.mousePosition;
            for (int i = 0; i<CheckDamage.Length; i++ )
            {
                Debug.Log("Found Target, applying damage");
-               CheckDamage[i].GetComponent<TV>().health -= damage;
+               CheckDamage[i].GetComponent<TV>().TakeDamage();
            }
             }
 
