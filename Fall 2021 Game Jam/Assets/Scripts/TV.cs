@@ -8,7 +8,7 @@ public class TV : MonoBehaviour
     public GameObject player;
     private NavMeshAgent agent;
 
-    public int heath;
+    public int health;
     
     private void Start() {
         agent=GetComponent<NavMeshAgent>();
