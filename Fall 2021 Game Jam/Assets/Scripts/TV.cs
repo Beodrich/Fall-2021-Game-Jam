@@ -1,6 +1,7 @@
-
+using System.Collections;
 using UnityEngine;
 using TMPro;
+[RequireComponent(typeof(AnimatorLogic))]
 
 
 public class TV : MonoBehaviour
@@ -22,6 +23,8 @@ public class TV : MonoBehaviour
     private Shooting shooting;
 
     public TMP_Text nameText;
+
+    private const string DIE= "tvDie";
 
 
     public AudioClip tvDie;
@@ -64,12 +67,17 @@ public class TV : MonoBehaviour
         healthbar.healthCur = health;
         if(health==0){
             AudioManager.instance.Play(tvDie);
-
-            Destroy(this.gameObject);
+            StartCoroutine(Die());
         }
 
     }
-    
+   private IEnumerator Die(){
+        GetComponent<AnimatorLogic>().ChangeAnimationState(DIE);
+
+        yield return new WaitForSeconds(0.5f);
+        Destroy(this.gameObject);
+
+    } 
     void Chase(){
         aIMovment.Move(player.transform);
         patrolPoint.setIsPatrol(false);
