@@ -267,17 +267,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7719923775478821962, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 219591406656117990, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1227538542}
+    - target: {fileID: 6781420649081932618, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4c68bb8bae2335d43a401cd335b2852e, type: 2}
     - target: {fileID: 8281960017144681192, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8281960017144681194, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8281960017144681194, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
       propertyPath: pizzaHealth
@@ -615,18 +615,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8281960017144681196, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
   m_PrefabInstance: {fileID: 434764766}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1227538540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+--- !u!95 &1227538542 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6781420649081932618, guid: 231969d3fd24bbc42b24b946cdfcd460, type: 3}
+  m_PrefabInstance: {fileID: 434764766}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1227538534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a51b37535c770a14e94d15a5857c1d2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1249909369
 GameObject:
   m_ObjectHideFlags: 0

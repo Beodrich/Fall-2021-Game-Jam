@@ -11,7 +11,7 @@ public class MoveScript : MonoBehaviour
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
-    public const string PLAYER_IDEL_ANIMATION="player ideal";
+    public const string PLAYER_IDEL_ANIMATION="player idel";
 
 
 
