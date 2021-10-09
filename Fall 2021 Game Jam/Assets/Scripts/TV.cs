@@ -23,6 +23,8 @@ public class TV : MonoBehaviour
 
     public TMP_Text nameText;
 
+
+    public AudioClip tvDie;
    private void Start() {
        aIMovment=GetComponent<AIMovment>();
        shooting=GetComponent<Shooting>();
@@ -62,7 +64,7 @@ public class TV : MonoBehaviour
         healthbar.healthCur = health;
         if(health==0){
             Destroy(this.gameObject);
-
+            AudioManager.instance.Play(tvDie);
         }
 
     }

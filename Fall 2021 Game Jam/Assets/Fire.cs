@@ -6,7 +6,6 @@ public class Fire : MonoBehaviour
     Transform player;
     Vector2 target;
 
-    public AudioClip pizzaTime;
     public float speed;
     // Start is called before the first frame update
     void Start()
@@ -15,8 +14,6 @@ public class Fire : MonoBehaviour
         target=new Vector2(player.position.x,player.position.y);
         /*come back to this*/
         Destroy(this.gameObject,3f);
-        //pizzaTime=GetComponent<AudioClip>();
-        AudioManager.instance.Play(pizzaTime);
         
     }
 
