@@ -6,6 +6,7 @@ public class TV : MonoBehaviour
 {
     public PatrolPoint patrolPoint;
     public GameObject player;
+    public Healthbar healthbar;
 
     public int health;
 
@@ -49,6 +50,7 @@ public class TV : MonoBehaviour
 
     public void TakeDamage(){
         health=Mathf.Max(0,health-1);
+        healthbar.healthCur = health;
         if(health==0){
             Destroy(this.gameObject);
 
