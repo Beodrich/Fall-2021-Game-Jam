@@ -1,27 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.AI;
+
 
 public class TV : MonoBehaviour
 {
+    public PatrolPoint patrolPoint;
     public GameObject player;
-    private NavMeshAgent agent;
+    public Healthbar healthbar;
 
     public int health;
+
+
+
+    public float range=5f;
+
+    private AIMovment aIMovment;
+
+    private bool isChasing=false;
+
+    private Shooting shooting;
+
+   private void Start() {
+       aIMovment=GetComponent<AIMovment>();
+       shooting=GetComponent<Shooting>();
+   }
     
-    private void Start() {
-        agent=GetComponent<NavMeshAgent>();
-        agent.updateRotation=false;
-        agent.updatePosition=false;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(player.transform.position);
+        if(InRange()<=range){
+            Chase();
+            isChasing=true;
+
+        }
+        else{
+            StopChase();
+            isChasing=false;
+        }
+        if(isChasing){
+            shooting.CheckForShoot();
+        }
+       // if(Mathf.Abs(localVelocity.z) < 0.01f){
+         //   Debug.Log("walking backwards");
+        //}
     }
-    public void Die(){
+
+    private float InRange()
+    {
+        return Vector3.Distance(transform.position, player.transform.position);
+    }
+
+    public void TakeDamage(){
+        health=Mathf.Max(0,health-1);
+        healthbar.healthCur = health;
+        if(health==0){
+            Destroy(this.gameObject);
+
+        }
 
     }
+    void Chase(){
+        aIMovment.Move(player.transform);
+        patrolPoint.setIsPatrol(false);
+    }
+    void StopChase(){
+        patrolPoint.setIsPatrol(true);
+    }
+    
 }
+

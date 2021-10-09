@@ -29,11 +29,20 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    void Shoot()
+   public void Shoot()
     {
         for (int i = 0; i < projectilesPerShoot; i++)
         {
             Instantiate(projectile, transform.position, transform.rotation);
         }
     }
-}
+    public void CheckForShoot(){
+         timeBetweenShootCurrent -= Time.deltaTime;
+            if (timeBetweenShootCurrent < 0)
+            {
+                timeBetweenShootCurrent = timeBetweenShoot;
+                Shoot();
+            }
+        }
+    }
+
