@@ -6,6 +6,9 @@ TagManager:
   tags:
   - sinko
   - Health
+  - Pizza
+  - Enemy
+  - Porch
   layers:
   - Default
   - TransparentFX

@@ -8,18 +8,23 @@ public class MoveScript : MonoBehaviour
     public float moveSpeed;
     public static int maxHealth = 8;
     public int currentHealth;
+    public int currentPizzas = 6;
+    public int currentDelivered = 0;
+    private int finalPizzas;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
     public const string PLAYER_IDEL_ANIMATION="player idel";
 
-
+    public TMPro.TMP_Text deliveredText;
+    public TMPro.TMP_Text carryingText;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        finalPizzas = currentPizzas;
     }
 
     void Update()
@@ -37,10 +42,22 @@ public class MoveScript : MonoBehaviour
             pizzaHealth.RemovePizzaSlices(1);
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (currentPizzas > 0)
         {
-            GetComponent<Shooting>().Shoot(1.5f);
+            if (Input.GetMouseButtonDown(1))
+            {
+                GetComponent<Shooting>().Shoot(1.5f);
+                currentPizzas -= 1;
+            }
         }
+        
+        if (currentDelivered >= finalPizzas)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("YouWin");
+        }
+        deliveredText.text = "Pizzas Delivered: " + currentDelivered + "/6";
+        carryingText.text = "Pizzas Carrying: " + currentPizzas + "/6";
+        
         PlayAnimation();
     }
 
@@ -63,6 +80,17 @@ public class MoveScript : MonoBehaviour
         {
             case "Health":
                 pizzaHealth.RemovePizzaSlices(-1);
+                Destroy(col.gameObject);
+                break;
+        }
+    }
+    
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        switch (col.gameObject.tag)
+        {
+            case "Pizza":
+                currentPizzas += 1;
                 Destroy(col.gameObject);
                 break;
         }

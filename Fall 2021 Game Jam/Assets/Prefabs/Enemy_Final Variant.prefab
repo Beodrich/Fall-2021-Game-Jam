@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2115112723433639408, guid: 60a46a934380c024185782d056252909, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 2115112723433639409, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: m_LocalScale.x
       value: 5.540758
@@ -231,10 +235,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2115112723433639423, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: health
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639423, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 0}
@@ -244,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 1309433275}
     - target: {fileID: 2115112723956736438, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: m_Name
-      value: Enemy_Final
+      value: Enemy_Final Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2115112723956736439, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: m_RootOrder
@@ -293,6 +293,10 @@ PrefabInstance:
     - target: {fileID: 7296874313130672483, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085592361184629278, guid: 60a46a934380c024185782d056252909, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60a46a934380c024185782d056252909, type: 3}

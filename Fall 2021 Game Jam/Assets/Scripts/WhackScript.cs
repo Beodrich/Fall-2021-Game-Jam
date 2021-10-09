@@ -22,6 +22,8 @@ public class WhackScript : MonoBehaviour
         private const string BREAD_WHACK="breadStickWack";
         private const string DEFAULT="New State";
 
+        public AudioClip BONK;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,7 @@ mouse_pos = Input.mousePosition;
             {
             GetComponent<AnimatorLogic>().ChangeAnimationState(BREAD_WHACK);
             StartCoroutine(PlayAnimation());
+            AudioManager.instance.Play(BONK);
 
            Collider2D[] CheckDamage = Physics2D.OverlapCircleAll(Whackpos.position, WhackRadius, DefineEnemy);
             Debug.Log("Trigger down");
