@@ -26,6 +26,30 @@ TextureImporter:
   - first:
       213: 1659302096796942366
     second: exclamation_7
+  - first:
+      213: 1277398186720973643
+    second: exclamation_8
+  - first:
+      213: -8606560305663704875
+    second: exclamation_9
+  - first:
+      213: -2119220091774987724
+    second: exclamation_10
+  - first:
+      213: 6090041496678946033
+    second: exclamation_11
+  - first:
+      213: 4134854087214158413
+    second: exclamation_12
+  - first:
+      213: 1879396928437684429
+    second: exclamation_13
+  - first:
+      213: -4447136220818916048
+    second: exclamation_14
+  - first:
+      213: 3922598350244355245
+    second: exclamation_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -56,7 +80,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -92,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -104,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
