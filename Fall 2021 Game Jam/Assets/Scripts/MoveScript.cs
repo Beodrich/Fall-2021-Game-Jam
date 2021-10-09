@@ -10,6 +10,7 @@ public class MoveScript : MonoBehaviour
     public int currentHealth;
     public int currentPizzas = 6;
     public int currentDelivered = 0;
+    private int finalPizzas;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
@@ -23,6 +24,7 @@ public class MoveScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        finalPizzas = currentPizzas;
     }
 
     void Update()
@@ -47,6 +49,11 @@ public class MoveScript : MonoBehaviour
                 GetComponent<Shooting>().Shoot(1.5f);
                 currentPizzas -= 1;
             }
+        }
+        
+        if (currentDelivered >= finalPizzas)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("YouWin");
         }
         deliveredText.text = "Pizzas Delivered: " + currentDelivered + "/6";
         carryingText.text = "Pizzas Carrying: " + currentPizzas + "/6";
