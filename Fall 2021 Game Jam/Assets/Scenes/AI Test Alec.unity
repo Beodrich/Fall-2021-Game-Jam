@@ -605,56 +605,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1552097044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2115112723433639408, guid: 60a46a934380c024185782d056252909, type: 3}
-  m_PrefabInstance: {fileID: 2115112722435199716}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1552097054
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552097044}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56be666ccdd04bf4a941d21490533acf, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1552097055
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552097044}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.31, y: 0.3}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.31, y: 0.3}
-  m_EdgeRadius: 0
 --- !u!1 &1737021398
 GameObject:
   m_ObjectHideFlags: 0
@@ -988,34 +938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2115112723433639408, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_Name
-      value: Tv
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639408, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639409, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5.540758
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639409, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5.6073723
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639409, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.9267
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639409, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.7091
-      objectReference: {fileID: 0}
-    - target: {fileID: 2115112723433639420, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3003940205522580032, guid: 08a47701a8d7dd547bad1c8086add7b6, type: 3}
     - target: {fileID: 2115112723433639422, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
@@ -1032,10 +954,6 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[3]
       value: 
       objectReference: {fileID: 1737021399}
-    - target: {fileID: 2115112723433639423, guid: 60a46a934380c024185782d056252909, type: 3}
-      propertyPath: health
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2115112723433639423, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: player
       value: 
@@ -1086,6 +1004,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2115112723956736439, guid: 60a46a934380c024185782d056252909, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9085592361184629278, guid: 60a46a934380c024185782d056252909, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
