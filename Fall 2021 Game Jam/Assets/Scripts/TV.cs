@@ -63,11 +63,13 @@ public class TV : MonoBehaviour
         health=Mathf.Max(0,health-1);
         healthbar.healthCur = health;
         if(health==0){
-            Destroy(this.gameObject);
             AudioManager.instance.Play(tvDie);
+
+            Destroy(this.gameObject);
         }
 
     }
+    
     void Chase(){
         aIMovment.Move(player.transform);
         patrolPoint.setIsPatrol(false);
