@@ -14,6 +14,11 @@ public class GenericFunctions : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu");
     }
 
+    public void LoadCredits()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+    }
+
     public void QuitGame()
     {
         Application.Quit();

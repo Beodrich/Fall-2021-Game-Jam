@@ -34,6 +34,7 @@ public class PizzaDeliveryPizza : MonoBehaviour
                 {
                     col.gameObject.GetComponent<Porch>().hasDelivered = true;
                     FindObjectOfType<MoveScript>().currentDelivered++;
+                    Destroy(col.gameObject);
                     Destroy(gameObject);
                 }
                 break;
