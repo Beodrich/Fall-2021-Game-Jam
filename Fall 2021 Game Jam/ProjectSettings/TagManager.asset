@@ -8,6 +8,7 @@ TagManager:
   - Health
   - Pizza
   - Enemy
+  - Porch
   layers:
   - Default
   - TransparentFX

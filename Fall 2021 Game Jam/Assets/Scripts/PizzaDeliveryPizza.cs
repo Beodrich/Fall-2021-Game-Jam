@@ -24,4 +24,19 @@ public class PizzaDeliveryPizza : MonoBehaviour
                 break;
         }
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        switch (col.tag)
+        {
+            case "Porch":
+                if (!col.gameObject.GetComponent<Porch>().hasDelivered)
+                {
+                    col.gameObject.GetComponent<Porch>().hasDelivered = true;
+                    FindObjectOfType<MoveScript>().currentDelivered++;
+                    Destroy(gameObject);
+                }
+                break;
+        }
+    }
 }
