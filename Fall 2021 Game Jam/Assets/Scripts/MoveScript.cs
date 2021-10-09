@@ -20,7 +20,7 @@ public class MoveScript : MonoBehaviour
     public TMPro.TMP_Text deliveredText;
     public TMPro.TMP_Text carryingText;
 
-
+    public AudioClip health;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -81,6 +81,7 @@ public class MoveScript : MonoBehaviour
         {
             case "Health":
                 pizzaHealth.RemovePizzaSlices(-1);
+                AudioManager.instance.Play(health);
                 Destroy(col.gameObject);
                 break;
         }
