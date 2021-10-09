@@ -37,7 +37,12 @@ public class PizzaHealth : MonoBehaviour
     {
         shakingTimeLeft = shakingTime;
         pizzaSlices -= value;
+        pizzaSlices = Mathf.Clamp(pizzaSlices, 0, 8);
         pizzaImage.sprite = pizzaSprites[pizzaSlices];
+        if (pizzaSlices == 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+        }
     }
 
 
