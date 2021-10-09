@@ -6,7 +6,7 @@ public class GenericFunctions : MonoBehaviour
 {
     public void LoadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("AI Test Alec");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainLevel");
     }
 
     public void LoadMenu()
