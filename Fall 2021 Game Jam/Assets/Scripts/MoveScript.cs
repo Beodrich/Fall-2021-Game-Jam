@@ -11,6 +11,7 @@ public class MoveScript : MonoBehaviour
     public int currentPizzas = 6;
     public int currentDelivered = 0;
     private int finalPizzas;
+    private float timePlayed;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
