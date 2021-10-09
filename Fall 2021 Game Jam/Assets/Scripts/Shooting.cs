@@ -29,11 +29,12 @@ public class Shooting : MonoBehaviour
         }
     }
 
-   public void Shoot()
+   public void Shoot(float distanceFromLook = 0)
     {
+        Vector3 direction = transform.right * distanceFromLook;
         for (int i = 0; i < projectilesPerShoot; i++)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
+            Instantiate(projectile, transform.position + direction, transform.rotation);
         }
     }
     public void CheckForShoot(){
