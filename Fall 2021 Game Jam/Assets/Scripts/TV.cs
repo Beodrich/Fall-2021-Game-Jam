@@ -6,7 +6,7 @@ using TMPro;
 public class TV : MonoBehaviour
 {
     public PatrolPoint patrolPoint;
-    public GameObject player;
+    private GameObject player;
     public Healthbar healthbar;
 
     public int health;
@@ -28,6 +28,7 @@ public class TV : MonoBehaviour
        shooting=GetComponent<Shooting>();
        RandomNames.MakeNames();
         nameText.text= RandomNames.GetRandonName();
+        player=GameObject.Find("Player");
    }
     
 
