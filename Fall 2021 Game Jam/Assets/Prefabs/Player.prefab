@@ -206,6 +206,8 @@ GameObject:
   - component: {fileID: 560906496730363895}
   - component: {fileID: 6889368600795556557}
   - component: {fileID: 8306681467842395800}
+  - component: {fileID: 2026855976}
+  - component: {fileID: 2026855975}
   m_Layer: 3
   m_Name: BreadStick_Weapon_Whack
   m_TagString: Untagged
@@ -299,3 +301,35 @@ MonoBehaviour:
   damage: 1
   target: {fileID: 0}
   angle: 0
+--- !u!95 &2026855976
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769038275133812357}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dacd6b4afb5b43748892f80719a97134, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2026855975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8769038275133812357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3c93a830b932e4390cb2e8427a64bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
