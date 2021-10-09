@@ -64,7 +64,7 @@ mouse_pos = Input.mousePosition;
 
         }
         else{
-        WhackLag -= Time.deltaTime; 
+        WhackLag = Time.deltaTime; 
 
         }
     }
