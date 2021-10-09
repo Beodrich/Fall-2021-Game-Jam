@@ -15,9 +15,13 @@ public class PizzaDeliveryPizza : MonoBehaviour
         rb.AddForce(shootStrength * dir.normalized, ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D col)
     {
-        
+        switch (col.gameObject.tag)
+        {
+            case "Enemy":
+                col.gameObject.GetComponent<TV>().TakeDamage();
+                break;
+        }
     }
 }

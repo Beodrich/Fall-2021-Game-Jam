@@ -9,12 +9,14 @@ public class MoveScript : MonoBehaviour
     public static int maxHealth = 8;
     public int currentHealth;
     public int currentPizzas = 6;
+    public int currentDelivered = 0;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
     public const string PLAYER_IDEL_ANIMATION="player idel";
 
-
+    public TMPro.TMP_Text deliveredText;
+    public TMPro.TMP_Text carryingText;
 
 
     void Start()
@@ -46,6 +48,8 @@ public class MoveScript : MonoBehaviour
                 currentPizzas -= 1;
             }
         }
+        deliveredText.text = "Pizzas Delivered: " + currentDelivered + "/6";
+        carryingText.text = "Pizzas Carrying: " + currentPizzas + "/6";
         
         PlayAnimation();
     }

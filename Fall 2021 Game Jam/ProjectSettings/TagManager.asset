@@ -7,6 +7,7 @@ TagManager:
   - sinko
   - Health
   - Pizza
+  - Enemy
   layers:
   - Default
   - TransparentFX
