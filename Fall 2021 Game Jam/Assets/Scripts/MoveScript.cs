@@ -8,6 +8,7 @@ public class MoveScript : MonoBehaviour
     public float moveSpeed;
     public static int maxHealth = 8;
     public int currentHealth;
+    public PizzaHealth pizzaHealth;
 
     void Start()
     {
@@ -25,5 +26,10 @@ public class MoveScript : MonoBehaviour
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            pizzaHealth.RemovePizzaSlices(1);
+        }
     }
 }
