@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 7580903eee78531498e8f38a4dafc84f
+guid: 4f6d85c733a324545a32635550aaf9a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9183013401223233568
-    second: BreadStick_0
+      213: 6158066999294638926
+    second: CrabBotWalk_0
   - first:
-      213: -6944299672116072417
-    second: BreadStick_1
+      213: -3365751119643870724
+    second: CrabBotWalk_1
   - first:
-      213: 402548744000014216
-    second: BreadStick_2
+      213: -8901105220381591200
+    second: CrabBotWalk_2
   - first:
-      213: -2920571410695164723
-    second: BreadStick_3
+      213: 4401645350122198491
+    second: CrabBotWalk_3
   - first:
-      213: -783297987566112863
-    second: BreadStick_4
+      213: -7518725060615934961
+    second: CrabBotWalk_4
+  - first:
+      213: 8156985769327075892
+    second: CrabBotWalk_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,97 +109,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BreadStick_0
+      name: CrabBotWalk_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 69
-        width: 24
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0200093e80e907f70800000000000000
-      internalID: 9183013401223233568
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreadStick_1
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 53
-        width: 11
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f10f8ad9d34e0af90800000000000000
-      internalID: -6944299672116072417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreadStick_2
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 37
-        width: 13
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88786ea23f3269500800000000000000
-      internalID: 402548744000014216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreadStick_3
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 20
-        width: 27
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcc6a5c96cb0877d0800000000000000
-      internalID: -2920571410695164723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BreadStick_4
-      rect:
-        serializedVersion: 2
-        x: 4
+        x: 3
         y: 3
-        width: 28
-        height: 10
+        width: 24
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,8 +123,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1afe7d161aa2125f0800000000000000
-      internalID: -783297987566112863
+      spriteID: e4b330c1f49d57550800000000000000
+      internalID: 6158066999294638926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrabBotWalk_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 4
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9f04f60337a41d0800000000000000
+      internalID: -3365751119643870724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrabBotWalk_2
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 4
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069b7ce46fbe87480800000000000000
+      internalID: -8901105220381591200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrabBotWalk_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd598410029c51d30800000000000000
+      internalID: 4401645350122198491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrabBotWalk_4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 4
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ce82ea46f18a790800000000000000
+      internalID: -7518725060615934961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CrabBotWalk_5
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 3
+        width: 24
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43228a2f65f633170800000000000000
+      internalID: 8156985769327075892
       vertices: []
       indices: 
       edges: []
