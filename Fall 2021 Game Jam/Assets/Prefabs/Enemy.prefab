@@ -139,8 +139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4066182671282447683}
-  healthMax: 3
-  healthCur: 3
+  healthMax: 6
+  healthCur: 6
 --- !u!1 &1762537310367172845
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,10 +455,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   patrolPoint: {fileID: 2115112723433639422}
-  player: {fileID: 0}
   healthbar: {fileID: 5279975857169942515}
-  health: 3
+  health: 6
   range: 12
+  nameText: {fileID: 0}
 --- !u!114 &2115112723433639416
 MonoBehaviour:
   m_ObjectHideFlags: 0
