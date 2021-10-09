@@ -74,6 +74,8 @@ public class TV : MonoBehaviour
    private IEnumerator Die(){
         GetComponent<AnimatorLogic>().ChangeAnimationState(DIE);
 
+        FindObjectOfType<MoveScript>().enemiesKilled += "\n" + nameText.text;
+
         yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
 
