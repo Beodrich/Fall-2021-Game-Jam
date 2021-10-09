@@ -18,7 +18,7 @@ public static class RandomNames
         names.Add("Panucci's Pizza");
         names.Add("Pizza Beach");
         names.Add("Shell E.Cheese");
-    
+        names.Add("Crust E.Crab");
     
     }
     public static string GetRandonName(){
