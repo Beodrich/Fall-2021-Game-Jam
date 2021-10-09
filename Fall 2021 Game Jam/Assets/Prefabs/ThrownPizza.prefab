@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shootStrength: 10
+  shoot: {fileID: 8300000, guid: 8c3f1500a338dbb45abd2c43077e89d5, type: 3}
 --- !u!212 &2508510306561210562
 SpriteRenderer:
   m_ObjectHideFlags: 0

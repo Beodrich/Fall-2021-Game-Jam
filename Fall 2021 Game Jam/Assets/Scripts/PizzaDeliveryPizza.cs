@@ -7,12 +7,15 @@ public class PizzaDeliveryPizza : MonoBehaviour
     private Rigidbody2D rb;
     public float shootStrength;
 
+    public AudioClip shoot;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 dir = (mousePos - FindObjectOfType<MoveScript>().transform.position);
         rb.AddForce(shootStrength * dir.normalized, ForceMode2D.Impulse);
+        AudioManager.instance.Play(shoot);
     }
 
     void OnCollisionEnter2D(Collision2D col)

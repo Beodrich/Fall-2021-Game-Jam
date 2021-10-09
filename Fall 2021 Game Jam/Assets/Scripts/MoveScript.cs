@@ -12,6 +12,7 @@ public class MoveScript : MonoBehaviour
     public int currentDelivered = 0;
     private int finalPizzas;
     private float timePlayed;
+    public string enemiesKilled;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
@@ -20,7 +21,7 @@ public class MoveScript : MonoBehaviour
     public TMPro.TMP_Text deliveredText;
     public TMPro.TMP_Text carryingText;
 
-
+    public AudioClip health;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,6 +38,7 @@ public class MoveScript : MonoBehaviour
         Vector3 dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        timePlayed += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -54,6 +56,8 @@ public class MoveScript : MonoBehaviour
         
         if (currentDelivered >= finalPizzas)
         {
+            PlayerPrefs.SetFloat("TimeBeaten", timePlayed);
+            PlayerPrefs.SetString("EnemiesBeaten",enemiesKilled);
             UnityEngine.SceneManagement.SceneManager.LoadScene("YouWin");
         }
         deliveredText.text = "Pizzas Delivered: " + currentDelivered + "/6";
@@ -81,6 +85,7 @@ public class MoveScript : MonoBehaviour
         {
             case "Health":
                 pizzaHealth.RemovePizzaSlices(-1);
+                AudioManager.instance.Play(health);
                 Destroy(col.gameObject);
                 break;
         }
