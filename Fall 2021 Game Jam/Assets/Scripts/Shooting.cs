@@ -29,7 +29,7 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    void Shoot()
+   public void Shoot()
     {
         for (int i = 0; i < projectilesPerShoot; i++)
         {
