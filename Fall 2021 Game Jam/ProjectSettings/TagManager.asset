@@ -6,6 +6,7 @@ TagManager:
   tags:
   - sinko
   - Health
+  - Pizza
   layers:
   - Default
   - TransparentFX

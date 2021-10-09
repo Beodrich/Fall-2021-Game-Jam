@@ -8,6 +8,7 @@ public class MoveScript : MonoBehaviour
     public float moveSpeed;
     public static int maxHealth = 8;
     public int currentHealth;
+    public int currentPizzas = 6;
     public PizzaHealth pizzaHealth;
 
     public const string PLAYER_MOVE_ANIMATION="player_walk";
@@ -37,10 +38,15 @@ public class MoveScript : MonoBehaviour
             pizzaHealth.RemovePizzaSlices(1);
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (currentPizzas > 0)
         {
-            GetComponent<Shooting>().Shoot(1.5f);
+            if (Input.GetMouseButtonDown(1))
+            {
+                GetComponent<Shooting>().Shoot(1.5f);
+                currentPizzas -= 1;
+            }
         }
+        
         PlayAnimation();
     }
 
@@ -63,6 +69,17 @@ public class MoveScript : MonoBehaviour
         {
             case "Health":
                 pizzaHealth.RemovePizzaSlices(-1);
+                Destroy(col.gameObject);
+                break;
+        }
+    }
+    
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        switch (col.gameObject.tag)
+        {
+            case "Pizza":
+                currentPizzas += 1;
                 Destroy(col.gameObject);
                 break;
         }
