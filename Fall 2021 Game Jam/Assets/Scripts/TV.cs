@@ -38,7 +38,7 @@ public class TV : MonoBehaviour
             isChasing=false;
         }
         if(isChasing){
-            shooting.Shoot();
+            shooting.CheckForShoot();
         }
     }
 
