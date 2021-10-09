@@ -8,6 +8,7 @@ public class PlayerDamage : MonoBehaviour
         if(other.gameObject.tag=="sinko"){
             Destroy(other.gameObject);
             GetComponent<MoveScript>().currentHealth-=1;
+            GetComponent<MoveScript>().pizzaHealth.RemovePizzaSlices(1);
         }
     }
 }
