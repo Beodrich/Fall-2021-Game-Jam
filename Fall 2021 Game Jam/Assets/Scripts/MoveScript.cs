@@ -49,5 +49,17 @@ public class MoveScript : MonoBehaviour
         GetComponent<AnimatorLogic>().ChangeAnimationState(PLAYER_MOVE_ANIMATION);
 
         }
+
+    
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        switch (col.tag)
+        {
+            case "Health":
+                pizzaHealth.RemovePizzaSlices(-1);
+                Destroy(col.gameObject);
+                break;
+        }
     }
 }
