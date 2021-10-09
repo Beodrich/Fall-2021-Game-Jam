@@ -16,7 +16,11 @@ public class WhackScript : MonoBehaviour
        Vector3 object_pos;
        public Transform target;
        public float angle; 
- 
+
+        bool wack;
+        //bread gaming
+        private const string BREAD_WHACK="breadStickWack";
+        private const string DEFAULT="New State";
 
     // Start is called before the first frame update
     void Start()
@@ -38,19 +42,28 @@ mouse_pos = Input.mousePosition;
         {
             if (Input.GetMouseButtonDown(0))
             {
+            GetComponent<AnimatorLogic>().ChangeAnimationState(BREAD_WHACK);
+            StartCoroutine(PlayAnimation());
+
            Collider2D[] CheckDamage = Physics2D.OverlapCircleAll(Whackpos.position, WhackRadius, DefineEnemy);
             Debug.Log("Trigger down");
            for (int i = 0; i<CheckDamage.Length; i++ )
            {
                Debug.Log("Found Target, applying damage");
                CheckDamage[i].GetComponent<TV>().TakeDamage();
+               wack=true;
            }
             }
+            //else   GetComponent<AnimatorLogic>().ChangeAnimationState(DEFAULT);
+
+            
 
 
         }
-        else 
+        else{
         WhackLag -= Time.deltaTime; 
+
+        }
     }
 
     void OnDrawGizmosSelected()
@@ -60,4 +73,11 @@ mouse_pos = Input.mousePosition;
 
     }
 
+IEnumerator PlayAnimation(){
+    yield return new WaitForSeconds(.3f);
+    GetComponent<AnimatorLogic>().ChangeAnimationState(DEFAULT);
+
+    
 }
+}
+

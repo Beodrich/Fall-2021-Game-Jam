@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using TMPro;
 
 
 public class TV : MonoBehaviour
@@ -20,9 +21,13 @@ public class TV : MonoBehaviour
 
     private Shooting shooting;
 
+    public TMP_Text nameText;
+
    private void Start() {
        aIMovment=GetComponent<AIMovment>();
        shooting=GetComponent<Shooting>();
+       RandomNames.MakeNames();
+        nameText.text= RandomNames.GetRandonName();
    }
     
 
