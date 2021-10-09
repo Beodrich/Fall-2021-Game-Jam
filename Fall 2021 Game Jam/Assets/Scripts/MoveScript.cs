@@ -36,6 +36,11 @@ public class MoveScript : MonoBehaviour
         {
             pizzaHealth.RemovePizzaSlices(1);
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            GetComponent<Shooting>().Shoot(1.5f);
+        }
         PlayAnimation();
     }
 
