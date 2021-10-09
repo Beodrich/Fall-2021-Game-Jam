@@ -16,7 +16,7 @@ public class PizzaHealth : MonoBehaviour
     void Start()
     {
         startingPosition = transform.position;
-        shakingTimeLeft = 5f;
+        shakingTimeLeft = 0f;
     }
 
     // Update is called once per frame
